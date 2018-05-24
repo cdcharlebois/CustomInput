@@ -1,12 +1,39 @@
-<widget id="CustomInput.widget.CurrencyInput" needsEntityContext="false" xmlns="http://www.mendix.com/widget/1.0/">
+<widget id="CustomInput.widget.CurrencyInput" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
     <name>CurrencyInput</name>
     <description>Dummy widget</description>
     <icon/>
     <properties>
-        <property key="dummyKey" type="string" required="false" defaultValue="">
-            <caption>Dummy key</caption>
-            <category>Appearance</category>
-            <description>This key was added to make the widget work in the Modeler (needs atleast 1 key). Please change/remove this one</description>
+        <property key="attribute" type="attribute" isPath="optional" pathType="reference" required="true">
+          <caption>Attribute</caption>
+          <category>General</category>
+          <description></description>
+          <attributeTypes>
+            <attributeType name="Decimal" />
+          </attributeTypes>
+        </property>
+        <property key="label" type="string" required="true">
+          <caption>Label</caption>
+          <category>General</category>
+          <description></description>
+        </property>
+        <property key="textRight" type="boolean" defaultValue="false">
+          <caption>Align Text Right?</caption>
+          <category>General</category>
+          <description></description>
+        </property>
+        <property key="display" type="enumeration" defaultValue="hor" required="true">
+          <caption>Display</caption>
+          <category>Appearance</category>
+          <description></description>
+          <enumerationValues>
+            <enumerationValue key="hor">Horizontal</enumerationValue>
+            <enumerationValue key="ver">Vertical</enumerationValue>
+          </enumerationValues>
+        </property>
+        <property key="width" type="integer" defaultValue="3" required="true">
+         <caption>Label Width</caption>
+          <category>Appearance</category>
+          <description>The width (in columns) of the label. (field will be 12-n)</description>
         </property>
     </properties>
 </widget>
